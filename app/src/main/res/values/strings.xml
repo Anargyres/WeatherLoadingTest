@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Exomind Test</string>
+    <string name="home_text">Bienvenue ici</string>
+    <string name="button_home">Voir la météo</string>
+    <string name="loading_text_1">Nous téléchargeons les données…</string>
+    <string name="loading_text_2">C\'est presque fini…</string>
+    <string name="loading_text_3">Plus que quelques secondes avant d\'avoir le résultat…</string>
 </resources>

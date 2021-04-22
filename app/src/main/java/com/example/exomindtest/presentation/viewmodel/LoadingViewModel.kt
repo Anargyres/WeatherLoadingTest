@@ -15,9 +15,9 @@ class LoadingViewModel(
     private val _liveDataWeather: MutableLiveData<WeatherData> = MutableLiveData()
     val liveDataWeather: LiveData<WeatherData> get() = _liveDataWeather
 
-    init {
+    fun getWeather(city_name: String) {
         viewModelScope.launch {
-            val jsonResult = getWeatherUseCase.invoke("Rennes")
+            _liveDataWeather.value = getWeatherUseCase.invoke(city_name)
         }
     }
 }
