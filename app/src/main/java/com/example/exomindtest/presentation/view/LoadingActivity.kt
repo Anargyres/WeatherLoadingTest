@@ -18,9 +18,9 @@ class LoadingActivity : AppCompatActivity() {
         const val current_progress = 10
     }
 
-    private var progressBar: ProgressBar = findViewById(R.id.progressBar)
-    private var progressText: TextView = findViewById(R.id.loading_text)
-    private var retryButton: Button = findViewById(R.id.retry_button)
+    private lateinit var progressBar: ProgressBar
+    private lateinit var progressText: TextView
+    private lateinit var retryButton: Button
 
     private val loadingViewModel: LoadingViewModel by viewModel()
 
@@ -35,6 +35,10 @@ class LoadingActivity : AppCompatActivity() {
     }
 
     private fun initOberver() {
+        progressBar = findViewById(R.id.progressBar)
+        progressText = findViewById(R.id.loading_text)
+        retryButton = findViewById(R.id.retry_button)
+
         launchProgressBar()
 
         retryButton.setOnClickListener {

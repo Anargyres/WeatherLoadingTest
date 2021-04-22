@@ -8,7 +8,7 @@ import com.example.exomindtest.R
 
 class MainActivity : AppCompatActivity() {
 
-    private var mainButton: Button = findViewById(R.id.button_main)
+    private lateinit var mainButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initObserver() {
+        mainButton = findViewById(R.id.button_main)
         mainButton.setOnClickListener {
             val intent = Intent(this, LoadingActivity::class.java)
             startActivity(intent)
