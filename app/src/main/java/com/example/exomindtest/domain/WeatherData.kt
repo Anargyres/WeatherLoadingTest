@@ -7,7 +7,7 @@ data class WeatherData(
 ) {
     companion object {
         val ERROR =
-            WeatherData(Weather("", "", "", ""), Main(0F, 0, 0, 0F, 0F), "")
+            WeatherData(Weather("", "", "", ""), Main(0.0, 0, 0, 0.0, 0.0), "")
     }
 }
 
@@ -19,9 +19,9 @@ data class Weather(
 )
 
 data class Main(
-    val temp: Float,
+    val temp: Double,
     val pressure: Int,
     val humidity: Int,
-    val temp_min: Float,
-    val temp_max: Float
+    val temp_min: Double,
+    val temp_max: Double
 )
